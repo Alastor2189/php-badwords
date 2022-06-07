@@ -27,6 +27,18 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
     <h2>Lunghezza del paragrafo</h2>
     <?php echo $text_lenght; ?>
+
+    <?php
+    $forbidden = $_GET['forbidden'];
+    $censored = str_replace($forbidden, "***", $text);
+    ?>
+
+    <h2>Paragrafo con parola censurata</h2>
+    <?php
+    echo $censored; ?>
+
+    <h2> Nuova lunghezza del paragrafo</h2>
+    <?php echo strlen($censored); ?>
 </body>
 
 </html>
